@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head;
+	     any other head content must come *after* these tags -->
+    <title>Test</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/dotnav.css" rel="stylesheet">
+    <link href="css/bg-col.css" rel="stylesheet">
+  </head>
+
+  <body class="w-100 h-100">
+    <div class="wrapper">
+	  <div class="main">
+
+    </div>
+  </div>
+
+    <!-- HTML -->
+    <div id="pwPage">
+      <div id="background" class="background">
+      </div>
+      <div class="pwForm" id="pwForm">
+        <input type="password" placeholder="Enter your secret code" class="form-control change noselect" id="pwField" name="password" onchange=formChanged()>
+        <div class="button noselect" value="clicked" id="pwButton" onclick=pwCheck()>Enter</div>
+      </div>
+      <div class="center d-none">
+        <div class="progressbar">
+          <div class="progress_percent">
+            <div class="percent_level"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Transition page after login-->
+    <div class="transition-page" style="text-align:center;">
+      <object>
+        <embed class="heart d-none noselect" id="heart" width="5.8%" height="5.8%">
+      <!--^svg, filling liquid animation to content inside of h1 -->
+          <div  class="sizer d-none noselect" id="sizer">
+            <div class="loader noselect" id="loader">
+              <h1>DEEZ NUTS</h1>
+            </div>
+          </div>
+        <div class="load d-none noselect" id="load">
+          <h5>GOTTEM</h5>
+        </div>
+        <div class="load2 d-none noselect" id="load2">
+          <h6>...jk KEK</h6>
+        </div>
+        <div class="load3 d-none noselect" id="load3">
+          <h6>This is from Amy, David, Lawrence, and Jason to our dear friend Josh! :></h6>
+        </div>
+      </object>
+    </div>
+    <!--dot navigation-->
+    <div class="page d-none w-100 h-100" id="page">
+      <div id= "nav" class="dotstyle dotstyle-tooltip noselect">
+        <ul class="overlay">
+          <li class="current"><a href="#">Home</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">End</a></li>
+        </ul>
+      </div>
+      <div id="section-0" class="w-100 h-100 bg-gray">
+        <!--homescreen-->
+      </div>
+      <div id="section-1" class="w-100 h-100 d-none bg-blue">
+        <!--stuff here-->
+      </div>
+      <div id="section-2" class="w-100 h-100 d-none">
+        <!--stuff here-->
+      </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menuloadinganim.js"></script>
+
+			<!-- [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+				new DotNav( nav, {
+					callback : function( idx ) {
+						//console.log( idx )
+					}
+				} );
+			} ); */
+
+      var $selected_section = $("#section-0")
+      var $selected_nav = $("#nav ul li:first")
+      //when everything in document is loaded
+      $(document).ready(function() {
+        //for each link in nav
+        $("#nav ul li").each(function(i) {
+          //when linked is clicked...
+          console.log(this)
+          console.log("#section-" +i)
+          var button = $(this)
+          button.click(function() {
+            $selected_nav.removeClass("current")
+            $selected_nav = button
+            $selected_nav.addClass("current")
+            console.log("test")
+            //hide current section
+            $selected_section.addClass("d-none")
+            //set current section to new section
+            $selected_section = $("#section-" +i)
+            //unhide current section
+            $selected_section.removeClass("d-none")
+            $selected_section.addClass('animated fadeIn');
+          })
+        })
+      })
+
+    var input = document.getElementById("pwField");
+    input.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("pwButton").click();
+      }
+    }); -->
+
+		</script>
+  </body>
+</html>

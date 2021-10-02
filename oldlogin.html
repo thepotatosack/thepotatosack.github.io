@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head;
+	     any other head content must come *after* these tags -->
+    <title>Test</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/dotnav.css" rel="stylesheet">
+    <link href="css/onepage-scroll.css" rel="stylesheet">
+    <link href="css/bg-col.css" rel="stylesheet">
+  </head>
+
+  <body class="w-100 h-100">
+    <div class="wrapper">
+	  <div class="main">
+
+    </div>
+  </div>
+    <!-- HTML -->
+    <div class="pwForm" id="pwForm">
+      <div class="p noselect">Super Secret Password</div>
+      <input type="password" placeholder="Password" class="form-control" id="pwField" name="password" onchange=formChanged()>
+      <div class="button noselect" value="clicked" id="pwButton" onclick=pwCheck()>Submit</div>
+    </div>
+    <!--SVG stuff-->
+    <div style="text-align:center;">
+      <object>
+        <embed src="heart.svg" class="heart d-none noselect" id="heart" width="5.8%" height="5.8%">
+      <!--^svg heart, v filling liquid heart -->
+          <div  class="sizer d-none noselect" id="sizer">
+            <div class="loader noselect" id="loader">
+              <h1>❤</h1>
+            </div>
+          </div>
+        <div class="load d-none noselect" id="load">
+          <h5>Loading</h5>
+        </div>
+      </object>
+    </div>
+    <!--dot navigation-->
+    <div class="page d-none w-100 h-100" id="page">
+      <div id= "nav" class="dotstyle dotstyle-tooltip noselect">
+        <ul>
+          <li class="current"><a href="#">Home</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">End</a></li>
+        </ul>
+      </div>
+      <div id="section-0" class="w-100 h-100 bg-gray">
+        <!--homescreen-->
+      </div>
+      <div id="section-1" class="w-100 h-100 d-none bg-blue">
+        <!--stuff here-->
+      </div>
+      <div id="section-2" class="w-100 h-100 d-none">
+        <!--stuff here-->
+      </div>
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menuloadinganim.js"></script>
+    <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".main").onepage_scroll({
+      	dotstyle: "fillup",
+        sectionContainer: "section",
+        responsiveFallback: 600,
+        loop: true
+      });
+		});
+
+			/* [].slice.call( document.querySelectorAll( '.dotstyle > ul' ) ).forEach( function( nav ) {
+				new DotNav( nav, {
+					callback : function( idx ) {
+						//console.log( idx )
+					}
+				} );
+			} ); */
+
+      var $selected_section = $("#section-0")
+      var $selected_nav = $("#nav ul li:first")
+      //when everything in document is loaded
+      $(document).ready(function() {
+        //for each link in nav
+        $("#nav ul li").each(function(i) {
+          //when linked is clicked...
+          console.log(this)
+          console.log("#section-" +i)
+          var button = $(this)
+          button.click(function() {
+            $selected_nav.removeClass("current")
+            $selected_nav = button
+            $selected_nav.addClass("current")
+            console.log("test")
+            //hide current section
+            $selected_section.addClass("d-none")
+            //set current section to new section
+            $selected_section = $("#section-" +i)
+            //unhide current section
+            $selected_section.removeClass("d-none")
+          })
+        })
+      })
+
+    var input = document.getElementById("pwField");
+    input.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        document.getElementById("pwButton").click();
+      }
+    });
+
+		</script>
+  </body>
+</html>
