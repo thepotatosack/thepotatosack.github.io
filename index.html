@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -63,32 +67,191 @@
           <h6>...jk KEK</h6>
         </div>
         <div class="load3 d-none noselect" id="load3">
-          <h6>This is from Amy, David, Lawrence, and Jason to our dear friend Josh! :></h6>
+          <h6>This is from Amy, David, Jason, Lawrence, Sean, and Nick to our dear potato...</h6>
         </div>
       </object>
     </div>
-    <!--dot navigation-->
-    <div class="page d-none w-100 h-100" id="page">
-      <div id= "nav" class="dotstyle dotstyle-tooltip noselect">
-        <ul class="overlay">
-          <li class="current"><a href="#">Home</a></li>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">End</a></li>
-        </ul>
-      </div>
-      <div id="section-0" class="w-100 h-100 bg-gray">
-        <!--homescreen-->
-      </div>
-      <div id="section-1" class="w-100 h-100 d-none bg-blue">
-        <!--stuff here-->
-      </div>
-      <div id="section-2" class="w-100 h-100 d-none">
-        <!--stuff here-->
+   <!--main page-->
+  <div class="page w-100 h-100 d-none" id="page">
+    <section id="menubar">
+    </section>
+    <div class="sidebar">
+      <div class="info-avatar"></div>
+      <div class="info-group">
+          <h1 class="info-name">Josh!!</h1>
+          <span class="info-desc">a collection of birthday messages from the potato sack to a very special person</span>
       </div>
     </div>
+    <div class="feed">
+      <div class="wrapper">
+          <main id="main">
+            <!--post item-->
+              <div class="post-item">
+                  <div class="post-frame">
+                      <article class="post-article">
+                          <header class="article-head">
+                            <div class="post-icon nick-icon">
+                              <span class="username">Nick</span>
+                            </div>
+                          </header>
+                          <div class="entry">
+                              <p class="entry-text">Hey there, Josh! I wish you a very happy birthday! I know it's only been a short time since I've been on the server, but I think you're a real one and a cool person. I really appreciate the kind words you gave me a few days ago so thank you so much for that. I hope you always stay cool and I hope you have a great day ahead!</p>
+                              <span class="entry-author">— Nick</span>
+                          </div>
+                          <footer class="entry-footer">
+                              <ul class="permalink">
+                                <li id="like-btn" class="like-btn">
+                                <span id="like-link" class="bx bx-heart"></span>
+                                <span id="permalabel" class="permalabel">Deez nuts</span>
+                                </li>
+                                <li class="entry-date">Oct 5, 21</li>
+                              </ul>
+                          </footer>
+                      </article>
+                  </div>
+              </div>
+              <!--post item-->
+              <div class="post-item">
+                <div class="post-frame">
+                    <article class="post-article">
+                        <header class="article-head">
+                          <div class="post-icon sean-icon">
+                            <span class="username">Sean</span>
+                          </div>
+                        </header>
+                        <div class="entry">
+                            <p class="entry-text">Hey Josh,<br>
+                              Happy anniversary of your birth!  Though distant, I'm thankful that we've been in touch as friends, and delighted to see you making big moves in life.  Thanks for the good laughs and hopefully more good times to come.</p>
+                            <span class="entry-author">— Sean</span>
+                        </div>
+                        <footer class="entry-footer">
+                            <ul class="permalink">
+                              <li id="like-btn2" class="like-btn">
+                              <span id="like-link2" class="bx bx-heart"></span>
+                              <span id="permalabel2" class="permalabel">Deez nuts</span>
+                              </li>
+                              <li class="entry-date">Oct 5, 21</li>
+                            </ul>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+            <!--post item-->
+            <div class="post-item">
+              <div class="post-frame">
+                  <article class="post-article">
+                      <header class="article-head">
+                        <div class="post-icon jason-icon">
+                          <span class="username">Jason</span>
+                        </div>
+                      </header>
+                      <div class="entry">
+                          <p class="entry-text">Thanks for being such an amazing person and friend! The server wouldn't be the same without you and the happiness and positive vibes you've brought to all of us. Hope you enjoy your presents, tanjouday homedappy Josh!</p>
+                          <span class="entry-author">— Jason</span>
+                      </div>
+                      <footer class="entry-footer">
+                          <ul class="permalink">
+                            <li id="like-btn3" class="like-btn">
+                            <span id="like-link3" class="bx bx-heart"></span>
+                            <span id="permalabel3" class="permalabel">Deez nuts</span>
+                            </li>
+                            <li class="entry-date">Oct 5, 21</li>
+                          </ul>
+                      </footer>
+                  </article>
+              </div>
+          </div>
+          <!--post item-->
+          <div class="post-item">
+            <div class="post-frame">
+                <article class="post-article">
+                    <header class="article-head">
+                      <div class="post-icon lawrence-icon">
+                        <span class="username">Lawrence</span>
+                      </div>
+                    </header>
+                    <div class="entry">
+                        <p class="entry-text">Happy birbdaaay Josh~<br>
+
+                          Thanks and much love with all you do here! Although you say you're babey, I truly feel like the way you spoil us, we're all your babeys. :D<br>
+                          
+                          Have a really great birbday and off to another great year!</p>
+                        <span class="entry-author">— Lawrence</span>
+                    </div>
+                    <footer class="entry-footer">
+                        <ul class="permalink">
+                          <li id="like-btn4" class="like-btn">
+                          <span id="like-link4" class="bx bx-heart"></span>
+                          <span id="permalabel4" class="permalabel">Deez nuts</span>
+                          </li>
+                          <li class="entry-date">Oct 5, 21</li>
+                        </ul>
+                    </footer>
+                </article>
+            </div>
+        </div>
+        <!--post item-->
+        <div class="post-item">
+          <div class="post-frame">
+              <article class="post-article">
+                  <header class="article-head">
+                    <div class="post-icon david-icon">
+                      <span class="username">David</span>
+                    </div>
+                  </header>
+                  <div class="entry">
+                      <p class="entry-text">Happy birthday Josh! I hope you get to eat a lot of good food today and celebrate your birthday to the fullest. Since you're always the life of the party and make all of our Minecraft Nights fun, I know you will. <br>
+                        <br>
+                        As a bonus gift, I wrote you a poem: <br>
+                        A simple question,<br>
+                        An unfamiliar term,<br>
+                        You just got DEEZ NUTS'd</p>
+                      <span class="entry-author">— David</span>
+                  </div>
+                  <footer class="entry-footer">
+                      <ul class="permalink">
+                        <li id="like-btn5" class="like-btn">
+                        <span id="like-link5" class="bx bx-heart"></span>
+                        <span id="permalabel5" class="permalabel">Deez nuts</span>
+                        </li>
+                        <li class="entry-date">Oct 5, 21</li>
+                      </ul>
+                  </footer>
+              </article>
+          </div>
+      </div>
+      <!--post item-->
+      <div class="post-item">
+        <div class="post-frame">
+            <article class="post-article">
+                <header class="article-head">
+                  <div class="post-icon amy-icon">
+                    <span class="username">Amy</span>
+                  </div>
+                </header>
+                <div class="entry">
+                    <p class="entry-text">Hihi Josh!<br>
+                      Today is a truly special day! today is the day an amazing, kind, talented, and humorous person was born!<br>
+                      Everyone here is truly grateful you are part of our potato family, the potato sack would not have ever been as warm and lively without you being there. I'm very glad that you're here with us, always making everyone's days brighter and being the most supportive of friends!
+                      <br>Hope you enjoyed your gift and the website hehe. To many more memories — happy birthday Josh! :></p>
+                    <span class="entry-author">— Amy</span>
+                </div>
+                <footer class="entry-footer">
+                    <ul class="permalink">
+                      <li id="like-btn6" class="like-btn">
+                      <span id="like-link6" class="bx bx-heart"></span>
+                      <span id="permalabel6" class="permalabel">Deez nuts</span>
+                      </li>
+                      <li class="entry-date">Oct 5, 21</li>
+                    </ul>
+                </footer>
+            </article>
+        </div>
+    </div>
+          </main>
+      </div>
+    </div>
+  </div>
 
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
