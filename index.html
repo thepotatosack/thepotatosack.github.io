@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -38,6 +39,9 @@
     <!-- HTML -->
     <div id="pwPage">
       <div id="background" class="background">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
       </div>
       <div class="pwForm" id="pwForm">
         <input type="password" placeholder="Enter your secret code" class="form-control change noselect" id="pwField" name="password" onchange=formChanged()>
@@ -58,17 +62,17 @@
       <!--^svg, filling liquid animation to content inside of h1 -->
           <div  class="sizer d-none noselect" id="sizer">
             <div class="loader noselect" id="loader">
-              <h1>DEEZ NUTS</h1>
+              <h1>🥚</h1>
             </div>
           </div>
         <div class="load d-none noselect" id="load">
-          <h5>GOTTEM</h5>
+          <h5>eggscuse the loading time</h5>
         </div>
         <div class="load2 d-none noselect" id="load2">
-          <h6>...jk KEK</h6>
+          <img src="img/nyaissasmile.png">
         </div>
         <div class="load3 d-none noselect" id="load3">
-          <h6>This is from Amy, David, Jason, Lawrence, Sean, and Nick to our dear potato...</h6>
+          <img src="img/nyaissasquint.png">
         </div>
       </object>
     </div>
@@ -77,35 +81,40 @@
     <section id="menubar">
     </section>
     <div class="sidebar">
-      <div class="info-avatar"></div>
-      <div class="info-group">
-          <h1 class="info-name">Josh!!</h1>
-          <span class="info-desc">a collection of birthday messages from the potato sack to a very special person</span>
+      <div class="info-container">
+        <div class="info-avatar"></div>
+        <div class="info-group">
+            <h1 class="info-name">David 🥔</h1>
+            <span class="info-desc">to egg or not to egg, <br>what is paissa without stare, <br>potato or potate? <br>hope you find the answers to these questions in life</span>
+            <img class="icon" src="img/prayge.png">
+        </div>
       </div>
     </div>
     <div class="feed">
-      <div class="wrapper">
+      <div id="animate" class="wrapper">
           <main id="main">
             <!--post item-->
               <div class="post-item">
                   <div class="post-frame">
                       <article class="post-article">
                           <header class="article-head">
-                            <div class="post-icon nick-icon">
-                              <span class="username">Nick</span>
+                            <div class="post-icon sean-icon">
+                              <span class="username">Sean</span>
                             </div>
                           </header>
                           <div class="entry">
-                              <p class="entry-text">Hey there, Josh! I wish you a very happy birthday! I know it's only been a short time since I've been on the server, but I think you're a real one and a cool person. I really appreciate the kind words you gave me a few days ago so thank you so much for that. I hope you always stay cool and I hope you have a great day ahead!</p>
-                              <span class="entry-author">— Nick</span>
+                              <p class="entry-text">Hey David,
+
+                                <br>Wishing you a very happy birthday as you turn [redacted] years old!  We're lucky to have you in this server, thankful that you provide fiscal backing as the resident whale.  I also hope that our efforts with exposure therapy will help you overcome your fear of "rEGGae".  Jokes aside, I wish you the best as you navigate and make those important career and life decisions.  Enjoy your special day!</p>
+                              <span class="entry-author">— Sean</span>
                           </div>
                           <footer class="entry-footer">
                               <ul class="permalink">
                                 <li id="like-btn" class="like-btn">
-                                <span id="like-link" class="bx bx-heart"></span>
-                                <span id="permalabel" class="permalabel">Deez nuts</span>
+                                <span id="like-link" class="bx bx-coffee"></span>
+                                <span id="permalabel" class="permalabel">Egg</span>
                                 </li>
-                                <li class="entry-date">Oct 5, 21</li>
+                                <li class="entry-date">Mar 18, 22</li>
                               </ul>
                           </footer>
                       </article>
@@ -116,22 +125,22 @@
                 <div class="post-frame">
                     <article class="post-article">
                         <header class="article-head">
-                          <div class="post-icon sean-icon">
-                            <span class="username">Sean</span>
+                          <div class="post-icon josh-icon">
+                            <span class="username">Josh</span>
                           </div>
                         </header>
                         <div class="entry">
-                            <p class="entry-text">Hey Josh,<br>
-                              Happy anniversary of your birth!  Though distant, I'm thankful that we've been in touch as friends, and delighted to see you making big moves in life.  Thanks for the good laughs and hopefully more good times to come.</p>
-                            <span class="entry-author">— Sean</span>
+                            <p class="entry-text">Happy 30th, man!<br>
+                              Thanks for being a real one all this time! Friends as great as you are far and few between. And between being able to talk with you about the likes of 3D printing, digital art, AND programming, it's hard to really come up with a way to thank you properly for everything. Our friendship means way more than I can really put into words, but I'm wishing you all the best today! Here's to many more together!</p>
+                            <span class="entry-author">— Josh</span>
                         </div>
                         <footer class="entry-footer">
                             <ul class="permalink">
                               <li id="like-btn2" class="like-btn">
-                              <span id="like-link2" class="bx bx-heart"></span>
-                              <span id="permalabel2" class="permalabel">Deez nuts</span>
+                              <span id="like-link2" class="bx bx-coffee"></span>
+                              <span id="permalabel2" class="permalabel">Egg</span>
                               </li>
-                              <li class="entry-date">Oct 5, 21</li>
+                              <li class="entry-date">Mar 18, 22</li>
                             </ul>
                         </footer>
                     </article>
@@ -147,16 +156,19 @@
                         </div>
                       </header>
                       <div class="entry">
-                          <p class="entry-text">Thanks for being such an amazing person and friend! The server wouldn't be the same without you and the happiness and positive vibes you've brought to all of us. Hope you enjoy your presents, tanjouday homedappy Josh!</p>
+                          <p class="entry-text">hey David! It has been a real privilege being friends with you for the past few months.  I'm really bad at putting things into words but I really appreciate you and everything you've done for all of us, and I hope you have the best of days for your birthday! p.s I hope jack o triple s imprinted comes home early</p>
+                          <img class="icon" src="img/prayge.png">
+                          <img class="icon" src="img/davidwhale.png">
+                          <img class="icon" src="img/pepegacredit.gif">
                           <span class="entry-author">— Jason</span>
                       </div>
                       <footer class="entry-footer">
                           <ul class="permalink">
                             <li id="like-btn3" class="like-btn">
-                            <span id="like-link3" class="bx bx-heart"></span>
-                            <span id="permalabel3" class="permalabel">Deez nuts</span>
+                            <span id="like-link3" class="bx bx-coffee"></span>
+                            <span id="permalabel3" class="permalabel">Egg</span>
                             </li>
-                            <li class="entry-date">Oct 5, 21</li>
+                            <li class="entry-date">Mar 18, 22</li>
                           </ul>
                       </footer>
                   </article>
@@ -167,25 +179,27 @@
             <div class="post-frame">
                 <article class="post-article">
                     <header class="article-head">
-                      <div class="post-icon lawrence-icon">
-                        <span class="username">Lawrence</span>
+                      <div class="post-icon khiem-icon">
+                        <span class="username">Khiem</span>
                       </div>
                     </header>
                     <div class="entry">
-                        <p class="entry-text">Happy birbdaaay Josh~<br>
+                        <p class="entry-text">Dear David,<br>
 
-                          Thanks and much love with all you do here! Although you say you're babey, I truly feel like the way you spoil us, we're all your babeys. :D<br>
+                          Happy birthday, fellow potato! Hope you have a fantastic birthday filled with lots of Ayaka knees (x6 dupes so that's 12 kneecaps in total), good luck with gacha rolls in Epic Seven, pizza with pineapple (much to my chagrin, I WILL allow it for today), the finest of coffee beans & last but not least, a day completely and "ruthlessly" void of any white spherically shaped objects from which the gallus gallus domesticus lays.
+                          Though we've only known each other for a couple months it's great to be able to meet another homie with similar interests, and I look forward to meeting you & other members of the Potato Sack later this year at PAX! As always, if you need any anime tiddies, you know where to find me heheh! Hoping this year is your year, best of luck with your job search & of course.. don't let your dreams bee knee memes!
                           
-                          Have a really great birbday and off to another great year!</p>
-                        <span class="entry-author">— Lawrence</span>
+                          <br>Best,<br>
+                          Khiem!</p>
+                        <span class="entry-author">— Khiem</span>
                     </div>
                     <footer class="entry-footer">
                         <ul class="permalink">
                           <li id="like-btn4" class="like-btn">
-                          <span id="like-link4" class="bx bx-heart"></span>
-                          <span id="permalabel4" class="permalabel">Deez nuts</span>
+                          <span id="like-link4" class="bx bx-coffee"></span>
+                          <span id="permalabel4" class="permalabel">Egg</span>
                           </li>
-                          <li class="entry-date">Oct 5, 21</li>
+                          <li class="entry-date">Mar 18, 22</li>
                         </ul>
                     </footer>
                 </article>
@@ -196,26 +210,37 @@
           <div class="post-frame">
               <article class="post-article">
                   <header class="article-head">
-                    <div class="post-icon david-icon">
-                      <span class="username">David</span>
+                    <div class="post-icon ayumi-icon">
+                      <span class="username">Mayhaps Amy</span>
                     </div>
                   </header>
                   <div class="entry">
-                      <p class="entry-text">Happy birthday Josh! I hope you get to eat a lot of good food today and celebrate your birthday to the fullest. Since you're always the life of the party and make all of our Minecraft Nights fun, I know you will. <br>
-                        <br>
-                        As a bonus gift, I wrote you a poem: <br>
-                        A simple question,<br>
-                        An unfamiliar term,<br>
-                        You just got DEEZ NUTS'd</p>
-                      <span class="entry-author">— David</span>
+                      <p class="entry-text">
+                        heyo david 
+                        <img class="icon" src="img/morningwave.gif">
+                      <br>
+                      many years ago today, one of the most loyal subordinates to the potato gods was born prayge
+                      hope you had an amazing birthday today filled with lots of food but most importantly - comfy, relaxing memories with friends and family!
+                      I'm really happy that you're here as part of our potato family and also a true friend in our lives, I'm very excited to finally meet you and others at PAX East! prayge, I know it will be a comfy DAVIDWHALE time and can't wait to make more comfy memories as a potato family :> 
+                      <br><br>you know what they say...
+                      <br>paissadeez...
+                      <br>monkaE...
+                      <br>the bee knee movie...
+                      <br>bee knee bee knee bee knee
+                      <br>YOU JUST GOT GNOMED 
+                     <img class="icon-small" src="img/handsup.png">
+                      <br>...
+                      <br>hehe <img class="icon" src="img/peepolove.png">
+                      </p>
+                      <span class="entry-author">— Mayhaps Amy</span>
                   </div>
                   <footer class="entry-footer">
                       <ul class="permalink">
                         <li id="like-btn5" class="like-btn">
-                        <span id="like-link5" class="bx bx-heart"></span>
-                        <span id="permalabel5" class="permalabel">Deez nuts</span>
+                        <span id="like-link5" class="bx bx-coffee"></span>
+                        <span id="permalabel5" class="permalabel">Egg</span>
                         </li>
-                        <li class="entry-date">Oct 5, 21</li>
+                        <li class="entry-date">Mar 18, 22</li>
                       </ul>
                   </footer>
               </article>
@@ -226,24 +251,22 @@
         <div class="post-frame">
             <article class="post-article">
                 <header class="article-head">
-                  <div class="post-icon amy-icon">
-                    <span class="username">Amy</span>
+                  <div class="post-icon mando-icon">
+                    <span class="username">Mando</span>
                   </div>
                 </header>
                 <div class="entry">
-                    <p class="entry-text">Hihi Josh!<br>
-                      Today is a truly special day! today is the day an amazing, kind, talented, and humorous person was born!<br>
-                      Everyone here is truly grateful you are part of our potato family, the potato sack would not have ever been as warm and lively without you being there. I'm very glad that you're here with us, always making everyone's days brighter and being the most supportive of friends!
-                      <br>Hope you enjoyed your gift and the website hehe. To many more memories — happy birthday Josh! :></p>
-                    <span class="entry-author">— Amy</span>
+                    <p class="entry-text">
+                      David!! Happy birthday! I hope you have a bees knee movie day! Always chill vibes in vc and fun chats. Hope your birthday is good with good food and with loved ones!<br>
+                    <span class="entry-author">— Mando</span>
                 </div>
                 <footer class="entry-footer">
                     <ul class="permalink">
                       <li id="like-btn6" class="like-btn">
-                      <span id="like-link6" class="bx bx-heart"></span>
-                      <span id="permalabel6" class="permalabel">Deez nuts</span>
+                      <span id="like-link6" class="bx bx-coffee"></span>
+                      <span id="permalabel6" class="permalabel">Egg</span>
                       </li>
-                      <li class="entry-date">Oct 5, 21</li>
+                      <li class="entry-date">Mar 18, 22</li>
                     </ul>
                 </footer>
             </article>
